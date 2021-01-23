@@ -11,13 +11,11 @@ class UserTile extends StatefulWidget {
   final String lastName;
   final String email;
   final String avatar;
-  final File imageFile;
 
   UserTile({
     this.index,
     this.firstName,
     this.email,
-    this.imageFile,
     this.lastName,
     this.avatar,
   });
