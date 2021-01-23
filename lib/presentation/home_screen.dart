@@ -9,9 +9,7 @@ import 'package:flutter/painting.dart';
 import 'package:random_color/random_color.dart';
 
 class HomeScreen extends StatefulWidget {
-  final Directory directory;
-
-  HomeScreen({this.directory});
+ 
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -23,10 +21,6 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     futureUserInfo = getUserInfo();
-  }
-
-  File file(String fileName) {
-    return File(widget.directory.path + "/" + fileName);
   }
 
   @override
@@ -66,7 +60,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         lastName: userData.lastName,
                         index: Key("index"),
                         email: userData.email,
-                        // imageFile: files[index],
                       );
                     },
                     shrinkWrap: true,
