@@ -6,7 +6,6 @@ import 'package:path_provider/path_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  _appDocsDir = await getApplicationDocumentsDirectory();
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     title: 'People',
@@ -16,11 +15,7 @@ void main() async {
     ),
     initialRoute: '/home',
     routes: {
-      '/home': (context) => HomeScreen(
-            directory: _appDocsDir,
-          )
+      '/home': (context) => HomeScreen()
     },
   ));
 }
-
-Directory _appDocsDir;
